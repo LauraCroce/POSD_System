@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Privacy Knowledge Base
+	</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<body>
+	<!--HEADER -->
+	<header>
+		<div class="header-container">
+			<!-- Logo -->
+			<div class="logo">
+				<h1>POSD System</h1>
+			</div>
+			<!-- Menu di Navigazione -->
+			<nav>
+				<ul>
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="signup.html" >Signup</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Sezione Hero -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <h2 class="hero-title">Base di Conoscenza Privacy</h2>
+            <p class="hero-description">Benvenuti nella nostra applicazione web dedicata alla Privacy Knowledge Base! Qui troverete tutto ciò di cui avete bisogno per integrare gli elementi fondamentali della privacy con il mapping esistente.</p>
+             <a href="#services" class="btn">Scopri di più</a>
+        </div>
+    </section>
+	
+
+	<!-- Sezione "Chi Siamo" -->
+	<section id="about">
+		<div class="container">
+			<h2>Chi Siamo</h2>
+			<div class="about-content">
+				<div class="about-text">
+					<p>Siamo un team appassionato e dedicato che si impegna a garantire la privacy e la sicurezza nei progetti informatici.</p>
+					<p>Il nostro obiettivo è assistere sviluppatori e aziende nell'implementazione delle best practices del GDPR, rendendo la privacy by design una parte integrante di ogni prodotto e servizio.</p>
+					<p>Scopri di più sul nostro team altamente qualificato e sulle soluzioni personalizzate che possiamo offrirti.</p>
+					<a href="#team" class="btn">Il nostro Team</a>
+				</div>
+				<!-- Immagine su Chi Siamo -->
+				<div class="about-image">
+					<img src="about-image.jpg" alt="Chi Siamo">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Sezione "Servizi" -->
+	<section id="services">
+		<div class="container">
+			<h2>Servizi</h2>
+			<div class="services-container">
+
+				<!-- Servizio 1: Conformità al GDPR -->
+				<div class="service">
+					<img src="gdpr.ico" alt="Icona GDPR" class="service-icon">
+					<h3>Conformità al GDPR</h3>
+					<p>Assistenza nella definizione di processi conformi al Regolamento Generale sulla Protezione dei Dati.</p>
+					<a href="gdpr.html" class="btn">Scopri di più</a>
+
+				</div>
+				<!-- Servizio 2: Pattern di Sicurezza -->
+				
+				<div class="service">
+					<img src="pattern.ico" alt="Icona GDPR" class="service-icon">
+					<h3>Pattern di Sicurezza</h3>
+					<p>Implementazione di pattern di sicurezza per proteggere i dati sensibili.</p>
+					<a href="security.html" class="btn">Scopri di più</a>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+	<!-- Struttura per la finestra modale -->
+	<div id="myModal" class="modal" >
+		<div class="modal-content"></div>
+	</div>
+
+	<section id="team">
+		<div class="container">
+			<h2>Il Nostro Team</h2>
+			<div class="team-container" id="teamContainer">
+				<!-- Area per inserire dinamicamente i membri del team -->
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Pulsante "Torna all'inizio" -->
+	<button class="back-to-top" aria-label="Torna all'inizio">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32" class="icon-2xl">
+        <path fill="currentColor" fill-rule="evenodd" d="M15.192 8.906a1.143 1.143 0 0 1 1.616 0l5.143 5.143a1.143 1.143 0 0 1-1.616 1.616l-3.192-3.192v9.813a1.143 1.143 0 0 1-2.286 0v-9.813l-3.192 3.192a1.143 1.143 0 1 1-1.616-1.616z" clip-rule="evenodd"></path>
+    </svg>
+	</button>
+
+	<script src="script.js"></script>
+	
+	<footer>
+		<small>
+			© INGEGNERIA DEL SOFTWARE 
+		</small>
+	</footer>
+
+</body>
+</html>

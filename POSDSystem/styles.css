@@ -1,0 +1,411 @@
+/* Definizione variabili CSS */
+:root {
+    --main-bg-color: rgba(18, 25, 40, 0.8); /* Colore di sfondo principale */
+    --main-text-color: #20d3d8; /* Colore del testo principale */
+    --main-hover-color: #1d97c1; /* Colore del testo al passaggio del mouse */
+    --button-bg-color: #123b52; /* Colore di sfondo dei pulsanti */
+    --button-hover-color: #146486; /* Colore dei pulsanti al passaggio del mouse */
+    --footer-bg-color: #121928; /* Colore di sfondo del footer */
+	--button-active-color: #ffdd57; /* Colore di sfondo del pulsante attivo */
+}
+
+/* Stili globali */
+body {
+    font-family: Arial, sans-serif; /* Font principale */
+    line-height: 1.6; /* Altezza della linea */
+    margin: 0; /* Margini */
+}
+
+.container {
+    width: 80%; /* Larghezza del contenitore */
+    margin: 0 auto; /* Centra il contenitore */
+    max-width: 1200px; /* Larghezza massima del contenitore */
+}
+
+/* Header */
+header {
+    background: var(--main-bg-color); /* Colore di sfondo dell'header */
+    color: var(--main-text-color); /* Colore del testo dell'header */
+    padding: 20px 0; /* Padding dell'header */
+    position: fixed; /* Fissa l'header in cima */
+    top: 0; /* Posizione dall'alto */
+    left: 0; /* Posizione da sinistra */
+    width: 100%; /* Larghezza completa */
+    z-index: 1000; /* Indice */
+}
+
+.header-container {
+    display: flex; /* Layout flex */
+    justify-content: space-between; /* Spazio tra gli elementi */
+    align-items: center; /* Allineamento degli elementi */
+    width: 80%; /* Larghezza del contenitore */
+    margin: 0 auto; /* Centra il contenitore */
+}
+
+.logo h1 {
+    font-size: 2em; /* Dimensione del font */
+    margin: 0; /* Margine */
+    text-transform: uppercase; /* Trasformazione del testo in maiuscolo */
+}
+
+nav ul {
+    list-style: none; /* Rimuove i punti elenco */
+    padding: 0; /* Rimuove il padding */
+    display: flex; /* Layout flex */
+}
+
+nav ul li {
+    margin-left: 20px; /* Margine a sinistra */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Rimuove il margine per il primo elemento */
+}
+
+nav ul li a {
+   color: var(--main-text-color); /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-size: 1.2em; /* Dimensione del font */
+    padding: 10px 20px; /* Padding per sembrare pulsanti */
+    background: var(--button-bg-color); /* Colore di sfondo */
+    border-radius: 5px; /* Bordi arrotondati */
+    transition: background 0.3s ease, color 0.3s ease; /* Transizione dello sfondo e del colore */
+}
+
+nav ul li a:hover {
+   background: var(--button-hover-color); /* Colore dello sfondo al passaggio del mouse */
+    color: #fff; /* Colore del testo al passaggio del mouse */
+}
+
+/* Stile per il pulsante attivo */
+nav ul li a.active {
+    background: var(--button-active-color); /* Colore di sfondo del pulsante attivo */
+    color: #000; /* Colore del testo del pulsante attivo */
+    font-weight: bold; /* Grassetto per evidenziare */
+}
+
+
+/* Footer */
+footer {
+    background: var(--footer-bg-color); /* Colore di sfondo del footer */
+    color: var(--main-text-color); /* Colore del testo del footer */
+    padding: 20px 0; /* Padding del footer */
+    text-align: center; /* Testo centrato */
+    position: relative; /* Posizionamento relativo */
+}
+
+.footer-text {
+    font-size: 0.9em; /* Dimensione del font */
+}
+
+footer::before {
+    content: ""; /* Contenuto vuoto */
+    position: absolute; /* Posizionamento assoluto */
+    top: 0; /* Posizione dall'alto */
+    left: 0; /* Posizione da sinistra */
+    width: 100%; /* Larghezza completa */
+    height: 100%; /* Altezza completa */
+    background: linear-gradient(to bottom, transparent, rgba(18, 25, 40, 0.5)); /* Sfondo gradiente */
+    z-index: -1; /* Indice di z */
+    opacity: 0; /* Opacità */
+    transition: opacity 0.5s ease; /* Transizione dell'opacità */
+}
+
+
+footer:hover::before {
+    opacity: 1; /* Opacità al passaggio del mouse */
+}
+
+/* Sezione "Chi siamo" */
+#about {
+    position: relative; /* Posizionamento relativo */
+    padding: 150px 0; /* Padding della sezione */
+    color: #fff; /* Colore del testo */
+    background-image: linear-gradient(rgba(18, 25, 40, 0.7), rgba(18, 25, 40, 0.7)), url('about-bg.jpg'); /* Immagine di sfondo con gradiente */
+    background-size: cover; /* Copertura dello sfondo */
+    background-position: center; /* Posizionamento centrale dello sfondo */
+    overflow: hidden; /* Nasconde l'overflow */
+}
+
+#about h2 {
+    font-size: 3em; /* Dimensione del font */
+    margin-bottom: 40px; /* Margine inferiore */
+}
+
+.about-content {
+    display: flex; /* Layout flex */
+    justify-content: space-between; /* Spazio tra gli elementi */
+    align-items: center; /* Allineamento degli elementi */
+}
+
+.about-text {
+    flex: 1; /* Flex grow */
+    padding-right: 20px; /* Padding a destra */
+}
+
+.about-text p {
+    font-size: 1.1em; /* Dimensione del font */
+    line-height: 1.6; /* Altezza della linea */
+    margin-bottom: 20px; /* Margine inferiore */
+}
+
+.about-text .btn {
+    padding: 10px 20px; /* Padding del pulsante */
+    background: var(--button-bg-color); /* Colore di sfondo del pulsante */
+    color: var(--main-text-color); /* Colore del testo del pulsante */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    border-radius: 5px; /* Bordi arrotondati */
+    transition: background 0.3s ease; /* Transizione dello sfondo */
+    display: inline-block; /* Display inline-block */
+    margin-top: 20px; /* Margine superiore */
+}
+
+.about-text .btn:hover {
+    background: var(--button-hover-color); /* Colore del pulsante al passaggio del mouse */
+}
+
+.about-image {
+    flex: 1; /* Flex grow */
+    max-width: 50%; /* Larghezza massima */
+}
+
+.about-image img {
+    max-width: 100%; /* Larghezza massima */
+    border-radius: 5px; /* Bordi arrotondati */
+    box-shadow: 0 0 10px rgba(18, 25, 40, 0.1); /* Ombra */
+}
+
+/* Sezione "Team" */
+#team {
+    padding: 80px 0; /* Padding della sezione */
+    background-color: rgba(18, 25, 40, 0.7); /* Colore di sfondo */
+    color: #f9f9f9; /* Colore del testo */
+    text-align: center; /* Testo centrato */
+}
+
+#team h2 {
+    font-size: 2.5em; /* Dimensione del font */
+    margin-bottom: 40px; /* Margine inferiore */
+}
+
+.team-container {
+    display: flex; /* Layout flex */
+    flex-wrap: wrap; /* Permette il wrapping degli elementi */
+    justify-content: center; /* Centro */
+}
+
+.team-member {
+    width: calc(33.33% - 40px); /* Larghezza del membro del team */
+    padding: 30px; /* Padding */
+    border-radius: 10px; /* Bordi arrotondati */
+    margin: 20px; /* Margine */
+    box-shadow: 0 0 20px rgba(18, 25, 40, 0.1); /* Ombra */
+    background-color: #fff; /* Colore di sfondo */
+    transition: transform 0.3s ease; /* Transizione della trasformazione */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Traslazione al passaggio del mouse */
+}
+
+.team-member img {
+    border-radius: 50%; /* Bordi arrotondati */
+    max-width: 200px; /* Larghezza massima */
+    height: auto; /* Altezza automatica */
+    margin-bottom: 20px; /* Margine inferiore */
+    box-shadow: 0 0 10px rgba(18, 25, 40, 0.1); /* Ombra */
+}
+
+.team-member h3 {
+    font-size: 1.5em; /* Dimensione del font */
+    margin-bottom: 10px; /* Margine inferiore */
+    color: var(--button-bg-color); /* Colore del testo */
+}
+
+.team-member p {
+    font-size: 1.1em; /* Dimensione del font */
+    color: #777; /* Colore del testo */
+    margin-bottom: 20px; /* Margine inferiore */
+}
+
+/* Hero Section */
+#hero {
+    position: relative; /* Posizionamento relativo */
+    height: 100vh; /* Altezza della sezione */
+    color: #fff; /* Colore del testo */
+    text-align: center; /* Testo centrato */
+    display: flex; /* Layout flex */
+    justify-content: center; /* Centro */
+    align-items: center; /* Centro verticale */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') no-repeat center center/cover; /* Sfondo con immagine e gradiente */
+    
+}
+
+.hero-bg {
+    position: absolute; /* Posizionamento assoluto */
+    top: 0; /* Posizione dall'alto */
+    left: 0; /* Posizione da sinistra */
+    width: 100%; /* Larghezza completa */
+    height: 100%; /* Altezza completa */
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* Sfondo con immagine */
+    z-index: -1; /* Indice di z */
+    animation: scaleHero 60s infinite linear; /* Animazione di scaling */
+}
+
+@keyframes scaleHero {
+    0% {
+        transform: scale(1.2); /* Scala a 1.2 */
+    }
+    50% {
+        transform: scale(1); /* Scala a 1 */
+    }
+    100% {
+        transform: scale(1.2); /* Scala a 1.2 */
+    }
+}
+
+/* Effetto di hover per i pulsanti */
+.btn {
+    padding: 10px 20px; /* Padding del pulsante */
+    background: var(--button-bg-color); /* Colore di sfondo del pulsante */
+    color: var(--main-text-color); /* Colore del testo del pulsante */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    border-radius: 5px; /* Bordi arrotondati */
+    transition: background 0.3s ease; /* Transizione dello sfondo */
+}
+
+.btn:hover {
+    background: var(--button-hover-color); /* Colore del pulsante al passaggio del mouse */
+    transform: translateY(-2px); /* Traslazione del pulsante */
+}
+
+/* Cambiamo colore dei link al passaggio del mouse */
+nav ul li a {
+    color: var(--main-text-color); /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    transition: color 0.3s ease; /* Transizione del colore */
+}
+
+nav ul li a:hover {
+    color: var(--main-hover-color); /* Colore del testo al passaggio del mouse */
+}
+
+/* Sezione "Servizi" */
+#services {
+    padding: 80px 0; /* Padding della sezione */
+    background-color: rgba(18, 25, 40, 0.5); /* Colore di sfondo */
+	text-align:center;
+	
+}
+
+#services h2 {
+    font-size: 2.5em; /* Dimensione del font */
+    text-align: center; /* Testo centrato */
+    margin-bottom: 40px; /* Margine inferiore */
+    color: #fff; /* Colore del testo */
+}
+
+.services-container {
+    display: flex; /* Layout flex */
+    flex-wrap: wrap; /* Permette il wrapping degli elementi */
+    justify-content: center; /* Centro */
+}
+
+.service {
+    width: calc(33.33% - 40px); /* Larghezza del servizio */
+    padding: 30px; /* Padding */
+    border-radius: 10px; /* Bordi arrotondati */
+    margin: 20px; /* Margine */
+    box-shadow: 0 0 20px rgba(18, 25, 40, 0.1); /* Ombra */
+    background-color: #fff; /* Colore di sfondo */
+}
+
+.service h3 {
+    font-size: 1.8em; /* Dimensione del font */
+    margin-bottom: 15px; /* Margine inferiore */
+    color: var(--button-bg-color); /* Colore del testo */
+}
+
+.service p {
+    font-size: 1.1em; /* Dimensione del font */
+    line-height: 1.6; /* Altezza della linea */
+    color: #777; /* Colore del testo */
+}
+
+.service-icon {
+    display: block; /* Imposta il display su blocco */
+    margin: 0 auto; /* Imposta i margini a 'auto' per allineare al centro */
+}
+
+.service .btn {
+    padding: 10px 20px; /* Padding del pulsante */
+    background: var(--button-bg-color); /* Colore di sfondo del pulsante */
+    color: var(--main-text-color); /* Colore del testo del pulsante */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    border-radius: 5px; /* Bordi arrotondati */
+    transition: background 0.3s ease; /* Transizione dello sfondo */
+}
+
+.service .btn:hover {
+    background: var(--button-hover-color); /* Colore del pulsante al passaggio del mouse */
+}
+
+
+/* Pulsante "Torna all'inizio" */
+.back-to-top {
+    position: fixed; /* Posizionamento fisso */
+    bottom: 20px; /* Posizione dal basso */
+    right: 20px; /* Posizione da destra */
+    background-color: var(--button-bg-color); /* Colore di sfondo */
+    color: var(--main-text-color); /* Colore del testo */
+    border: none; /* Rimuove il bordo */
+    border-radius: 50%; /* Bordi arrotondati */
+    width: 50px; /* Larghezza */
+    height: 50px; /* Altezza */
+    display: flex; /* Layout flex */
+    justify-content: center; /* Centro */
+    align-items: center; /* Centro verticale */
+    cursor: pointer; /* Puntatore del mouse */
+    transition: background-color 0.3s ease; /* Transizione del colore di sfondo */
+}
+
+.back-to-top:hover {
+    background-color: var(--button-hover-color); /* Colore al passaggio del mouse */
+}
+
+/* Stili per la finestra modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

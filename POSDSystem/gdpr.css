@@ -1,0 +1,276 @@
+/* Definizione variabili CSS */
+:root {
+    --main-bg-color: rgba(18, 25, 40, 0.8); /* Colore di sfondo principale */
+    --main-text-color: #20d3d8; /* Colore del testo principale */
+    --main-hover-color: #1d97c1; /* Colore del testo al passaggio del mouse */
+    --button-bg-color: #123b52; /* Colore di sfondo dei pulsanti */
+    --button-hover-color: #146486; /* Colore dei pulsanti al passaggio del mouse */
+    --footer-bg-color: #121928; /* Colore di sfondo del footer */
+    --button-active-color: #ffdd57; /* Colore di sfondo del pulsante attivo */
+    --hero-bg-url: url('hero-bg.jpg'); /* URL immagine di sfondo dell'hero */
+}
+
+/* Stili globali */
+body {
+    font-family: Arial, sans-serif; /* Font principale */
+    line-height: 1.6; /* Altezza della linea */
+    margin: 0; /* Margini */
+    color: var(--main-text-color); /* Colore del testo */
+    background-color: #f9f9f9; /* Colore di sfondo della pagina */
+}
+
+.container {
+    width: 80%; /* Larghezza del contenitore */
+    margin: 0 auto; /* Centra il contenitore */
+    max-width: 1200px; /* Larghezza massima del contenitore */
+}
+
+/* Header */
+header {
+    background: var(--main-bg-color); /* Colore di sfondo dell'header */
+    color: var(--main-text-color); /* Colore del testo dell'header */
+    padding: 20px 0; /* Padding dell'header */
+    position: fixed; /* Fissa l'header in cima */
+    top: 0; /* Posizione dall'alto */
+    left: 0; /* Posizione da sinistra */
+    width: 100%; /* Larghezza completa */
+    z-index: 1000; /* Indice */
+}
+
+.header-container {
+    display: flex; /* Layout flex */
+    justify-content: space-between; /* Spazio tra gli elementi */
+    align-items: center; /* Allineamento degli elementi */
+    width: 80%; /* Larghezza del contenitore */
+    margin: 0 auto; /* Centra il contenitore */
+}
+
+.logo h1 {
+    font-size: 2em; /* Dimensione del font */
+    margin: 0; /* Margine */
+    text-transform: uppercase; /* Trasformazione del testo in maiuscolo */
+}
+
+nav ul {
+    list-style: none; /* Rimuove i punti elenco */
+    padding: 0; /* Rimuove il padding */
+    display: flex; /* Layout flex */
+}
+
+nav ul li {
+    margin-left: 20px; /* Margine a sinistra */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Rimuove il margine per il primo elemento */
+}
+
+nav ul li a {
+    color: var(--main-text-color); /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-size: 1.2em; /* Dimensione del font */
+    padding: 10px 20px; /* Padding per sembrare pulsanti */
+    background: var(--button-bg-color); /* Colore di sfondo */
+    border-radius: 5px; /* Bordi arrotondati */
+    transition: background 0.3s ease, color 0.3s ease; /* Transizione dello sfondo e del colore */
+}
+
+nav ul li a:hover {
+    background: var(--button-hover-color); /* Colore dello sfondo al passaggio del mouse */
+    color: #fff; /* Colore del testo al passaggio del mouse */
+}
+
+/* Stile per il pulsante attivo */
+nav ul li a.active {
+    background: var(--button-active-color); /* Colore di sfondo del pulsante attivo */
+    color: #000; /* Colore del testo del pulsante attivo */
+    font-weight: bold; /* Grassetto per evidenziare */
+}
+
+/* Stili per la sezione Hero */
+#hero {
+    position: relative; /* Posizionamento relativo */
+    height: 100vh; /* Altezza della vista */
+    color: #fff; /* Colore del testo */
+    text-align: center; /* Testo centrato */
+    display: flex; /* Layout flex */
+    justify-content: center; /* Centro orizzontale */
+    align-items: center; /* Centro verticale */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--hero-bg-url) no-repeat center center/cover; /* Sfondo gradiente e immagine */
+}
+
+/* Stili per la sezione Servizi GDPR */
+#services {
+    padding: 80px 0; /* Padding */
+    background-color: #f9f9f9; /* Colore di sfondo */
+}
+
+#services h2 {
+    font-size: 2.5em; /* Dimensione del font */
+    text-align: center; /* Testo centrato */
+    margin-bottom: 40px; /* Margine inferiore */
+    color: #333; /* Colore del testo */
+}
+
+.services-container {
+    display: flex; /* Layout flex */
+    flex-wrap: wrap; /* Consente il wrap */
+    justify-content: center; /* Centro orizzontale */
+}
+
+.service {
+    width: calc(33.33% - 40px); /* Larghezza con margini */
+    padding: 30px; /* Padding */
+    border-radius: 10px; /* Bordi arrotondati */
+    margin: 20px; /* Margine */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombra */
+    background-color: #fff; /* Colore di sfondo */
+}
+
+.service h3 {
+    font-size: 1.8em; /* Dimensione del font */
+    margin-bottom: 15px; /* Margine inferiore */
+    color: #333; /* Colore del testo */
+}
+
+.service p {
+    font-size: 1.1em; /* Dimensione del font */
+    line-height: 1.6; /* Altezza della linea */
+    color: #777; /* Colore del testo */
+}
+
+.service .btn {
+    padding: 10px 20px; /* Padding del pulsante */
+    background: var(--button-bg-color); /* Colore di sfondo del pulsante */
+    color: var(--main-text-color); /* Colore del testo del pulsante */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    border-radius: 5px; /* Bordi arrotondati */
+    transition: background 0.3s ease; /* Transizione dello sfondo */
+}
+
+.service .btn:hover {
+    background: var(--button-hover-color); /* Colore del pulsante al passaggio del mouse */
+    transform: translateY(-2px); /* Traslazione del pulsante */
+}
+
+/* Footer */
+footer {
+    background: var(--footer-bg-color); /* Colore di sfondo del footer */
+    color: var(--main-text-color); /* Colore del testo del footer */
+    padding: 20px 0; /* Padding del footer */
+    text-align: center; /* Testo centrato */
+    position: relative; /* Posizionamento relativo */
+}
+
+footer .footer-text {
+    font-size: 0.9em; /* Dimensione del font */
+}
+
+footer::before {
+    content: ""; /* Contenuto vuoto */
+    position: absolute; /* Posizionamento assoluto */
+    top: 0; /* Posizione dall'alto */
+    left: 0; /* Posizione da sinistra */
+    width: 100%; /* Larghezza completa */
+    height: 100%; /* Altezza completa */
+    background: linear-gradient(to bottom, transparent, rgba(18, 25, 40, 0.5)); /* Sfondo gradiente */
+    z-index: -1; /* Indice di z */
+    opacity: 0; /* Opacità */
+    transition: opacity 0.5s ease; /* Transizione dell'opacità */
+}
+
+footer:hover::before {
+    opacity: 1; /* Opacità al passaggio del mouse */
+}
+
+/* Effetto di hover per i pulsanti */
+.btn {
+    padding: 10px 20px; /* Padding del pulsante */
+    background: var(--button-bg-color); /* Colore di sfondo del pulsante */
+    color: var(--main-text-color); /* Colore del testo del pulsante */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    border-radius: 5px; /* Bordi arrotondati */
+    transition: background 0.3s ease; /* Transizione dello sfondo */
+}
+
+.btn:hover {
+    background: var(--button-hover-color); /* Colore del pulsante al passaggio del mouse */
+    transform: translateY(-2px); /* Traslazione del pulsante */
+}
+
+/* Pulsante "Torna all'inizio" */
+.back-to-top {
+    position: fixed; /* Posizionamento fisso */
+    bottom: 70px; /* Posizione dal basso */
+    right: 20px; /* Posizione da destra */
+    background-color: var(--button-bg-color); /* Colore di sfondo */
+    color: var(--main-text-color); /* Colore del testo */
+    border: none; /* Rimuove il bordo */
+    border-radius: 50%; /* Bordi arrotondati */
+    width: 50px; /* Larghezza */
+    height: 50px; /* Altezza */
+    display: flex; /* Layout flex */
+    justify-content: center; /* Centro */
+    align-items: center; /* Centro verticale */
+    cursor: pointer; /* Puntatore del mouse */
+    transition: background-color 0.3s ease; /* Transizione del colore di sfondo */
+}
+
+.back-to-top:hover {
+    background-color: var(--button-hover-color); /* Colore al passaggio del mouse */
+}
+
+/* Stili per la sezione Privacy By Design Details */
+#privacy-by-design-details {
+    padding: 80px 0; /* Padding della sezione */
+    background-color: #f9f9f9; /* Colore di sfondo */
+}
+
+#privacy-by-design-details h2 {
+    font-size: 2.5em; /* Dimensione del font */
+    text-align: center; /* Testo centrato */
+    margin-bottom: 40px; /* Margine inferiore */
+    color: #333; /* Colore del testo */
+}
+
+.privacy-details {
+    margin-bottom: 20px; /* Margine inferiore */
+}
+
+.privacy-details h3 {
+    font-size: 1.5em; /* Dimensione del font */
+    color: var(--button-bg-color); /* Colore del testo */
+    cursor: pointer; /* Puntatore a mano */
+    margin: 0; /* Margine */
+    padding: 10px; /* Padding */
+    border-radius: 5px; /* Bordi arrotondati */
+    background-color: #eee; /* Colore di sfondo */
+}
+
+.privacy-details h3:hover {
+    background-color: #ddd; /* Colore di sfondo al passaggio del mouse */
+}
+
+.privacy-details .content {
+    display: none; /* Nascondi contenuto per impostazione predefinita */
+    padding: 20px; /* Padding */
+    border-left: 3px solid var(--button-bg-color); /* Bordo sinistro */
+    background-color: #fff; /* Colore di sfondo */
+    border-radius: 0 5px 5px 0; /* Bordi arrotondati */
+}
+
+.privacy-details .content p,
+.privacy-details .content ul {
+    font-size: 1.1em; /* Dimensione del font */
+    line-height: 1.6; /* Altezza della linea */
+    color: #777; /* Colore del testo */
+}
+
+.privacy-details .content ul {
+    list-style-type: disc; /* Tipo di lista */
+    padding-left: 20px; /* Padding a sinistra */
+}
+
+.privacy-details .content ul li {
+    margin-bottom: 10px; /* Margine inferiore */
+}
