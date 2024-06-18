@@ -43,7 +43,7 @@ label {
     color: #123b52; /* colore delle etichette */
 }
 
-buttom[type="submit"],
+button[type="submit"],
 input[type="text"],
 input[type="email"],
 input[type="password"] {
