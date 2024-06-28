@@ -1,65 +1,41 @@
-/* Stili globali */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121928; /* colore di sfondo principale */
-    color: #20d3d8; /* colore del testo principale */
-    line-height: 1.6; /* altezza della riga per una migliore leggibilità */
-}
-
-
-
-
-.container {
-    max-width: 600px;
-    margin: 110px auto; /* spaziatura dal bordo superiore */
+/* Stili specifici per il form di login e registrazione */
+.login-form, .signup-form {
+    width: 500px;
+    margin: auto;
     padding: 20px;
-    background-color: #f9f9f9; /* colore di sfondo del contenitore */
-    border-radius: 20px; /* bordi arrotondati */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* ombra */
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
 }
 
-h2 {
-    font-size: 28px; /* dimensione del titolo */
-    margin-bottom: 20px;
-    color: #123b52; /* colore del titolo */
-    text-align: center; /* centratura del titolo */
+.login-form h2, .signup-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #123b52;
+}
+
+.hero-bg {
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* Sfondo con immagine */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') no-repeat center center/cover; /* Sfondo con immagine e gradiente */
 }
 
 .form-group {
     margin-bottom: 20px;
 }
 
-.hero-bg {
-   background: url('hero-bg.jpg') no-repeat center center/cover; /* Sfondo con immagine */
-   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') no-repeat center center/cover; /* Sfondo con immagine e gradiente */
-}
-
 label {
-    display: block;
-    margin-bottom: 5px;
     font-weight: bold;
-    color: #123b52; /* colore delle etichette */
+    color: #555;
 }
 
-
-button[type="submit"],
 input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 12px; /* spaziatura interna */
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 10px; /* bordi arrotondati */
+    border-radius: 5px;
     box-sizing: border-box;
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* transizione al passaggio del mouse */
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #146486; /* colore del bordo al focus */
 }
 
 button[type="submit"] {
@@ -74,86 +50,66 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #146486; /* colore del pulsante al passaggio del mouse */
+    background-color: #146486;
 }
 
+.signup-link, .login-link {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}
+
+.signup-link a, .login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover, .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    height: 80px; /* Altezza dell'header */
+    padding: 20px; /* Padding per separare il contenuto dall'header */
+}
+
+/* Form */
+.container {
+    margin-top: 130px; /* Margine superiore per spostare il form sotto l'header */
+	margin-bottom: 80px; /* Aggiunto margine inferiore per lasciare spazio al footer */
+}
+
+/* Footer */
 footer {
-    margin-top: 30px;
-    text-align: center;
-    color: #777; /* colore del testo del piè di pagina */
+    background: var(--footer-bg-color); /* Colore di sfondo del footer */
+    color: var(--main-text-color); /* Colore del testo del footer */
+    padding: 20px 0; /* Padding del footer */
+    text-align: center; /* Testo centrato */
+    position: fixed; /* Posizionamento fisso */
+    left: 0; /* Posizione sinistra */
+    bottom: 0; /* Posizione inferiore */
+    width: 100%; /* Larghezza completa */
+    z-index: 100; /* Assicura che il footer sia sopra il contenuto */
 }
 
-/* Background del hero */
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    z-index: -1;
-    animation: scaleHero 60s infinite linear;
+.footer-text {
+    font-size: 0.9em; /* Dimensione del font */
 }
 
-@keyframes scaleHero {
-    0% {
-        transform: scale(1.2);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.2);
-    }
+footer::before {
+    content: ""; /* Contenuto vuoto */
+    position: absolute; /* Posizionamento assoluto */
+    top: 0; /* Posizione dall'alto */
+    left: 0; /* Posizione da sinistra */
+    width: 100%; /* Larghezza completa */
+    height: 100%; /* Altezza completa */
+    background: linear-gradient(to bottom, transparent, rgba(18, 25, 40, 0.5)); /* Sfondo gradiente */
+    z-index: -1; /* Indice di z */
+    opacity: 0; /* Opacità */
+    transition: opacity 0.5s ease; /* Transizione dell'opacità */
 }
 
-button {
-    background-color: #123b52; /* colore del pulsante */
-    color: #fff;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 10px; /* bordi arrotondati */
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease; /* transizione al passaggio del mouse */
-}
-
-
-/* Form styles */
-#msform {
-    width: 400px;
-    margin: 50px auto;
-    text-align: center;
-    position: relative;
-}
-
-#msform fieldset {
-    background: white;
-    border: 0 none;
-    border-radius: 3px;
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    padding: 20px 30px;
-    box-sizing: border-box;
-    width: 80%;
-    margin: 0 10%;
-    /* Stacking fieldsets above each other */
-    position: absolute;
-}
-
-/* Hide all except first fieldset */
-#msform fieldset:not(:first-of-type) {
-    display: none;
-}
-
-/* Inputs */
-#msform input, #msform textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    font-size: 13px;
+footer:hover::before {
+    opacity: 1; /* Opacità al passaggio del mouse */
 }
